@@ -2,8 +2,8 @@ from keras.models import Sequential
 from keras.layers import Dense
 import numpy
 # fix random seed for reproducibility
-# seed = 10
-# numpy.random.seed(seed)
+seed = 10
+numpy.random.seed(seed)
 
 #加载数据
 dataset = numpy.loadtxt("pima-indians-diabetes.csv", delimiter=",")
