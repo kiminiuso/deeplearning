@@ -35,8 +35,7 @@ y = tf.layers.dense(inputs=dense2, units=1, activation=None)
 loss = tf.reduce_mean(tf.reduce_sum(tf.square(y_ - y),reduction_indices=[1]))
 
 
-# 5.选择 optimizer 使 loss 达到最小,要用adam
-# train_step = tf.train.GradientDescentOptimizer(0.1).minimize(loss)
+# 5.选择 optimizer 使 loss 达到最小,要用adam优化
 train_step = tf.train.AdamOptimizer(learning_rate=0.01).minimize(loss)
 
 with tf.Session() as sess:
@@ -57,4 +56,5 @@ with tf.Session() as sess:
            correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
            accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
            print("第 %g 次训练，损失率 %g ， 正确率 %g" % (i,
-                                               sess.run(loss, feed_dict={x: X, y_: Y}), sess.run(accuracy, feed_dict={x: X, y_: Y})))
+                                               sess.run(loss, feed_dict={x: X, y_: Y}),
+                                               sess.run(accuracy, feed_dict={x: X, y_: Y})))
