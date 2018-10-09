@@ -1,3 +1,9 @@
+#自定义日志，数据，不传git
+logs/
+MNIST_data/
+textOCR/dataset/
+textOCR/Train.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

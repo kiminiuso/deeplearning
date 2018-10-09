@@ -5,7 +5,6 @@ from sklearn.cross_validation import train_test_split
 from sklearn import preprocessing
 
 #输出改为2维，通过比较概率来计算准确率
-
 dataset = np.loadtxt("pima-indians-diabetes.csv", delimiter=",")
 X = dataset[:, 0:8]
 # 归一化，没有这一步回归不了。。。想不通
@@ -57,6 +56,8 @@ train_step = tf.train.AdamOptimizer(0.01).minimize(loss)
 
 with tf.Session() as sess:
     init_op = tf.global_variables_initializer()
+    # merged = tf.summary.merge_all(key='summaries')
+    # tf_writer = tf.summary.FileWriter("logs/", sess.graph)
     sess.run(init_op)
 
     epochs = 500
@@ -64,19 +65,23 @@ with tf.Session() as sess:
         total_batch = int(len(X_train) / batch_size)
         X_batches = np.array_split(X_train, total_batch)
         Y_batches = np.array_split(Y_train, total_batch)
+
         for i in range(total_batch):
             sess.run(train_step, feed_dict={x: X_batches[i], y_: Y_batches[i]})
+            # ss = sess.run(merged, feed_dict={x: X_batches[i], y_: Y_batches[i]})
+            # tf_writer.add_summary(ss, e * batch_size + i)
 
         if e % 10 == 0:
             # total_loss = sess.run(loss, feed_dict={x: X, y_: Y})
             # print("After %d training step(s), cross entropy on all data is %g" % (e, total_loss))
             correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
             accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+
             print("After %d training step(s) : 损失率 %g ， 在测试集上的正确率 %g， 在全集上的正确率 %g" % (e, sess.run(loss, feed_dict={x: X_train, y_: Y_train}),
                                        sess.run(accuracy, feed_dict={x: X_test, y_: Y_test}),sess.run(accuracy, feed_dict={x: X, y_: Y})))
 
     print('y_ : ', Y_test[0:9])
     print('y : ', sess.run(y, feed_dict={x: X_test[0:9]}))
 
-
+    # tf_writer.close()
 

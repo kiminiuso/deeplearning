@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3819C1E214FD67C00FACA8D /* EasySignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3819C1B214FD67C00FACA8D /* EasySignatureView.m */; };
+		E3819C1F214FD67C00FACA8D /* PopSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3819C1C214FD67C00FACA8D /* PopSignatureView.m */; };
 		E3A6EB0E214CE99D00E1662C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A6EB0D214CE99D00E1662C /* AppDelegate.m */; };
 		E3A6EB11214CE99D00E1662C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A6EB10214CE99D00E1662C /* ViewController.m */; };
 		E3A6EB14214CE99D00E1662C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A6EB12214CE99D00E1662C /* Main.storyboard */; };
@@ -18,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E3819C1A214FD67C00FACA8D /* PopSignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopSignatureView.h; sourceTree = "<group>"; };
+		E3819C1B214FD67C00FACA8D /* EasySignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasySignatureView.m; sourceTree = "<group>"; };
+		E3819C1C214FD67C00FACA8D /* PopSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopSignatureView.m; sourceTree = "<group>"; };
+		E3819C1D214FD67C00FACA8D /* EasySignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasySignatureView.h; sourceTree = "<group>"; };
 		E3A6EB09214CE99D00E1662C /* MINST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MINST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A6EB0C214CE99D00E1662C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E3A6EB0D214CE99D00E1662C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E3819C19214FD67C00FACA8D /* EasySignature */ = {
+			isa = PBXGroup;
+			children = (
+				E3819C1A214FD67C00FACA8D /* PopSignatureView.h */,
+				E3819C1C214FD67C00FACA8D /* PopSignatureView.m */,
+				E3819C1D214FD67C00FACA8D /* EasySignatureView.h */,
+				E3819C1B214FD67C00FACA8D /* EasySignatureView.m */,
+			);
+			path = EasySignature;
+			sourceTree = "<group>";
+		};
 		E3A6EB00214CE99D00E1662C = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +79,7 @@
 		E3A6EB0B214CE99D00E1662C /* MINST */ = {
 			isa = PBXGroup;
 			children = (
+				E3819C19214FD67C00FACA8D /* EasySignature */,
 				E3A6EB25214CE9D500E1662C /* MNIST.mlmodel */,
 				E3A6EB0C214CE99D00E1662C /* AppDelegate.h */,
 				E3A6EB0D214CE99D00E1662C /* AppDelegate.m */,
@@ -149,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A6EB11214CE99D00E1662C /* ViewController.m in Sources */,
+				E3819C1E214FD67C00FACA8D /* EasySignatureView.m in Sources */,
+				E3819C1F214FD67C00FACA8D /* PopSignatureView.m in Sources */,
 				E3A6EB17214CE99E00E1662C /* MINST.xcdatamodeld in Sources */,
 				E3A6EB1F214CE99F00E1662C /* main.m in Sources */,
 				E3A6EB26214CE9D500E1662C /* MNIST.mlmodel in Sources */,
@@ -296,6 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N95XZ3D2E3;
 				INFOPLIST_FILE = MINST/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,6 +338,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N95XZ3D2E3;
 				INFOPLIST_FILE = MINST/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

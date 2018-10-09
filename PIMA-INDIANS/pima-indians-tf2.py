@@ -38,13 +38,16 @@ Y = dataset[:,8]
 Y = np.array(Y).reshape((-1,1))
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.33, random_state=0)
 print('###')
-print(X_train)
-print(Y_train)
-print(X_test)
-print(Y_test)
+# print(X_train)
+# print(Y_train)
+# print(X_test)
+# print(Y_test)
 
 with tf.Session() as sess:
     init_op = tf.global_variables_initializer()
+
+    tf_writer = tf.summary.FileWriter("logs/", sess.graph)
+
     sess.run(init_op)
 
     epochs = 500
@@ -59,5 +62,5 @@ with tf.Session() as sess:
             total_loss = sess.run(loss, feed_dict={x: X, y_: Y})
             print("After %d training step(s), cross entropy on all data is %g" % (e, total_loss))
 
-    print('y_', Y_train[0:10])
-    print('y', sess.run(y, feed_dict={x: X_train[0:10]}))
+    print('y_', Y_train[0:9])
+    print('y', sess.run(y, feed_dict={x: X_train[0:9]}))
