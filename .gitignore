@@ -1,6 +1,6 @@
 #自定义日志，数据，不传git
 logs/
-MNIST_data/
+MINST_data/
 textOCR/dataset/
 textOCR/Train.csv
 *.pdf
