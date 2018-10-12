@@ -3,6 +3,9 @@ logs/
 MNIST_data/
 textOCR/dataset/
 textOCR/Train.csv
+*.pdf
+dataset/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

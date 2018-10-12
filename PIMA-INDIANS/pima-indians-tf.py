@@ -4,7 +4,7 @@ from numpy.random import RandomState
 from sklearn.cross_validation import train_test_split
 from sklearn import preprocessing
 
-#输出改为2维，通过比较概率来计算准确率
+# 输出改为2维，通过比较概率来计算准确率
 dataset = np.loadtxt("pima-indians-diabetes.csv", delimiter=",")
 X = dataset[:, 0:8]
 # 归一化，没有这一步回归不了。。。想不通
@@ -14,7 +14,7 @@ Y_ = dataset[:, 8]
 Y = []
 # Y = dataset[:, 8]
 # Y = np.array(Y).reshape((-1, 1))
-#[没生病，生病]
+# one hot 处理
 for yyyy in Y_:
     if yyyy == 0:
         Y.append([1, 0])
@@ -53,7 +53,6 @@ loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=y, labels=y
 # loss = tf.reduce_mean(tf.reduce_sum(tf.square(y_-y), reduction_indices=[1]))
 train_step = tf.train.AdamOptimizer(0.01).minimize(loss)
 
-
 with tf.Session() as sess:
     init_op = tf.global_variables_initializer()
     # merged = tf.summary.merge_all(key='summaries')
@@ -77,11 +76,11 @@ with tf.Session() as sess:
             correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
             accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
-            print("After %d training step(s) : 损失率 %g ， 在测试集上的正确率 %g， 在全集上的正确率 %g" % (e, sess.run(loss, feed_dict={x: X_train, y_: Y_train}),
-                                       sess.run(accuracy, feed_dict={x: X_test, y_: Y_test}),sess.run(accuracy, feed_dict={x: X, y_: Y})))
+            print("After %d training step(s) : 损失率 %g ， 在测试集上的正确率 %g， 在全集上的正确率 %g" % (
+            e, sess.run(loss, feed_dict={x: X_train, y_: Y_train}),
+            sess.run(accuracy, feed_dict={x: X_test, y_: Y_test}), sess.run(accuracy, feed_dict={x: X, y_: Y})))
 
     print('y_ : ', Y_test[0:9])
     print('y : ', sess.run(y, feed_dict={x: X_test[0:9]}))
 
     # tf_writer.close()
-
