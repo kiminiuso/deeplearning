@@ -3,47 +3,55 @@ import pickle
 import numpy as np
 import pandas as pd
 
-train_data = {b'data':[], b'labels':[]} #两个items都是list形式
+train_data = {b'data': [], b'labels': []}  # 两个items都是list形式
 # 5*10000的训练数据和1*10000的测试数据，数据为dict形式，train_data[b'data']为10000 * 3072的numpy向量
 # 3072个数字表示图片特征，前1024个表示红色通道，中间1024表示绿色通道，最后1024表示蓝色通道
 # train[b'labels']为长度为10000的list，每一个list数字对应以上上3072维的一个特征
 
+data_dir = './dataset/data_batch_'  # 数据所在路径
+testdata_dir = "./dataset/test_batch"
+
 # 加载训练数据
 for i in range(5):
-    with open("./dataset/data_batch_" + str(i + 1), mode='rb') as file:
+    with open(data_dir + str(i + 1), mode='rb') as file:
         data = pickle.load(file, encoding='bytes')
         train_data[b'data'] += list(data[b'data'])
         train_data[b'labels'] += data[b'labels']
 
 # 加载测试数据
-with open("./dataset/test_batch", mode='rb') as file:
+with open(testdata_dir, mode='rb') as file:
     test_data = pickle.load(file, encoding='bytes')
 
 # 定义一些变量
-NUM_LABLES = 10 # 分类结果为10类
-FC_SIZE = 512   # 全连接隐藏层节点个数
-BATCH_SIZE = 100 # 每次训练batch数
-lamda = 0.004   # 正则化系数，这里添加了正则化但是没有使用
+NUM_LABLES = 10  # 分类结果为10类
+FC_SIZE = 512  # 全连接隐藏层节点个数
+BATCH_SIZE = 100  # 每次训练batch数
+lamda = 0.004  # 正则化系数，这里添加了正则化但是没有使用
 
 sess = tf.InteractiveSession()
 
+
 # 卷积层权重初始化，随机初始化均值为0，方差为0.1
 def weight_variable(shape):
-    initial = tf.truncated_normal(shape, stddev = 0.1)
+    initial = tf.truncated_normal(shape, stddev=0.1)
     return tf.Variable(initial)
+
 
 # 卷积层偏置初始化为常数0.1
 def bias_variable(shape):
-    initial = tf.constant(0.1, shape = shape)
+    initial = tf.constant(0.1, shape=shape)
     return tf.Variable(initial)
+
 
 # 定义卷积操作，卷积步长为1. padding = 'SAME' 表示全0填充
 def conv2d(x, W):
-    return tf.nn.conv2d(x, W, strides = [1, 1, 1, 1], padding = 'SAME')
+    return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
+
 
 # 定义最大池化操作，尺寸为2，步长为2，全0填充
 def max_pool_2x2(x):
-    return tf.nn.max_pool(x, ksize = [1, 2, 2, 1],strides = [1, 2, 2, 1], padding = 'SAME')
+    return tf.nn.max_pool(x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
+
 
 # 对输入进行占位操作，输入为BATCH*3072向量，输出为BATCH*10向量
 x = tf.placeholder(tf.float32, [None, 3072])
@@ -56,7 +64,7 @@ x_image = tf.transpose(x_image, [0, 2, 3, 1])
 # 第一层卷积，滤波器参数5*5*3, 32个
 W_conv1 = weight_variable([5, 5, 3, 32])
 b_conv1 = bias_variable([32])
-h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1) # 卷积
+h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)  # 卷积
 h_pool1 = max_pool_2x2(h_conv1)  # 池化
 
 # 第二层卷积，滤波器参数5 * 5 * 32, 64个
@@ -84,7 +92,7 @@ y = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2)
 w1_loss = lamda * tf.nn.l2_loss(W_fc1)  # 对W_fc1使用L2正则化
 w2_loss = lamda * tf.nn.l2_loss(W_fc2)  # 对W_fc2使用L2正则化
 # 交叉熵损失
-cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices = [1]))
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
 # 总损失
 loss = w1_loss + w2_loss + cross_entropy
 # 用AdamOptimizer优化器训练
@@ -92,7 +100,7 @@ train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
 
 # 计算准确率
 correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
-accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32)) #tf.cast将数据转换成指定类型
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))  # tf.cast将数据转换成指定类型
 
 # 开始训练
 # tf.global_variables_initializer().run()
@@ -112,18 +120,18 @@ y_test = np.array(pd.get_dummies(test_data[b'labels']))
 for i in range(10000):
     # 100条数据为1个batch，轮流训练
     start = i * BATCH_SIZE % 50000
-    train_step.run(feed_dict = {x: x_train[start: start + BATCH_SIZE],
-                                    y_: y_train[start: start + BATCH_SIZE], keep_prob: 0.5})
+    train_step.run(feed_dict={x: x_train[start: start + BATCH_SIZE],
+                              y_: y_train[start: start + BATCH_SIZE], keep_prob: 0.5})
     # 每迭代100次在前200条个测试集上测试训练效果
     if i % 100 == 0:
         # 测试准确率
         train_accuracy = accuracy.eval(feed_dict={x: x_test[0: 1000],
                                                   y_: y_test[0: 1000], keep_prob: 1.0})
         # 该次训练的损失
-        loss_value = cross_entropy.eval(feed_dict = {x: x_train[start: start + BATCH_SIZE],
-                                    y_: y_train[start: start + BATCH_SIZE], keep_prob: 0.5})
+        loss_value = cross_entropy.eval(feed_dict={x: x_train[start: start + BATCH_SIZE],
+                                                   y_: y_train[start: start + BATCH_SIZE], keep_prob: 0.5})
         print("step %d, trainning accuracy， %g loss %g" % (i, train_accuracy, loss_value))
 
-#测试
-test_accuracy = accuracy.eval(feed_dict = {x: x_test, y_: y_test, keep_prob: 1.0})
+# 测试
+test_accuracy = accuracy.eval(feed_dict={x: x_test, y_: y_test, keep_prob: 1.0})
 print("test accuracy %g" % test_accuracy)
