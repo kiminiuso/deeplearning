@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbe36051-abe7-47d0-a92a-8f7a84cc46ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar10.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar10/BUILD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar10/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar10/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar10/cifar10.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar10/cifar10_eval.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar10/cifar10_input.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar10/cifar10_input_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar10/cifar10_multi_gpu_train.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar10/cifar10_train.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar10model1.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/textOCR/LiberationMono-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/textOCR/LiberationMono-BoldItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/textOCR/LiberationMono-Italic.ttf" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/textOCR/train.py" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar10.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deeplearning.iml" afterPath="$PROJECT_DIR$/.idea/deeplearning.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CNN/cifar-10/cifar-10-cnn.py" afterPath="$PROJECT_DIR$/CNN/cifar-10/cifar-10-cnn.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MINST/minst.py" afterPath="$PROJECT_DIR$/MINST/minst.py" />
-    </list>
+    <list default="true" id="fbe36051-abe7-47d0-a92a-8f7a84cc46ca" name="Default" comment="" />
     <ignored path="deeplearning.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -610,9 +590,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2048" height="1152" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23978066" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23978066" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942238" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2698556" sideWeight="0.50797606" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
