@@ -40,8 +40,7 @@ def rnn_lstm(x, Weights, biases):
     # cell 中的 dropout
     def attn_cell():
         lstm_cell = tf.contrib.rnn.BasicLSTMCell(n_hiddens)
-        with tf.name_scope('lstm_dropout'):
-            return tf.contrib.rnn.DropoutWrapper(lstm_cell, output_keep_prob=keep_prob)
+        return tf.contrib.rnn.DropoutWrapper(lstm_cell, output_keep_prob=keep_prob)
 
     # attn_cell = tf.contrib.rnn.DropoutWrapper(lstm_cell, output_keep_prob=keep_prob)
     # 实现多层 LSTM
@@ -49,14 +48,13 @@ def rnn_lstm(x, Weights, biases):
     enc_cells = []
     for i in range(0, n_layers):
         enc_cells.append(attn_cell())
-    with tf.name_scope('lstm_cells_layers'):
-        mlstm_cell = tf.contrib.rnn.MultiRNNCell(enc_cells, state_is_tuple=True)
+
+    mlstm_cell = tf.contrib.rnn.MultiRNNCell(enc_cells, state_is_tuple=True)
     # 全零初始化 state
     _init_state = mlstm_cell.zero_state(batch_size, dtype=tf.float32)
     # dynamic_rnn 运行网络
     outputs, states = tf.nn.dynamic_rnn(mlstm_cell, x, initial_state=_init_state, dtype=tf.float32, time_major=False)
     # 输出
-    # return tf.matmul(outputs[:,-1,:], Weights) + biases
     return tf.nn.softmax(tf.matmul(outputs[:, -1, :], Weights) + biases)
 
 

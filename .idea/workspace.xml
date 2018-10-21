@@ -2,52 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbe36051-abe7-47d0-a92a-8f7a84cc46ca" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deeplearning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deeplearning.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST.xcodeproj/project.pbxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/AppDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/AppDelegate.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Assets.xcassets/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Assets.xcassets/eight.imageset/14978199835997.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Assets.xcassets/eight.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Assets.xcassets/four.imageset/14978202165336.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Assets.xcassets/four.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Assets.xcassets/one.imageset/14978178986780.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Assets.xcassets/one.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Assets.xcassets/three.imageset/1497820050162.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Assets.xcassets/three.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Assets.xcassets/two.imageset/14978214768760.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Assets.xcassets/two.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Base.lproj/Main.storyboard" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/EasySignature/EasySignatureView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/EasySignature/EasySignatureView.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/EasySignature/PopSignatureView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/EasySignature/PopSignatureView.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/MINST.xcdatamodeld/.xccurrentversion" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/MINST.xcdatamodeld/MINST.xcdatamodel/contents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/MNIST.mlmodel" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/ViewController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/ViewController.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/MINST/main.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST-IOS/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST_data/t10k-images-idx3-ubyte.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST_data/t10k-labels-idx1-ubyte.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST_data/train-images-idx3-ubyte.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/MNIST_data/train-labels-idx1-ubyte.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/Screen Shot 0030-10-12 at 8.52.57 AM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/lennet-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/lstm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/minst.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/minst2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/minst_model1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MINST/tensorBoard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MNIST/lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/MNIST/lstm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="deeplearning.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,7 +30,7 @@
     <SUITE FILE_PATH="coverage/deeplearning$image_change.coverage" NAME="image-change Coverage Results" MODIFIED="1538220192912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/deeplearning$lstm.coverage" NAME="lstm Coverage Results" MODIFIED="1540123102331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MINST" />
     <SUITE FILE_PATH="coverage/deeplearning$pima_indians_tf.coverage" NAME="pima-indians-tf Coverage Results" MODIFIED="1538034645129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/deeplearning$lstm__1_.coverage" NAME="lstm (1) Coverage Results" MODIFIED="1540127066785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MNIST" />
+    <SUITE FILE_PATH="coverage/deeplearning$lstm__1_.coverage" NAME="lstm (1) Coverage Results" MODIFIED="1540131239475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MNIST" />
     <SUITE FILE_PATH="coverage/deeplearning$tensorBoard.coverage" NAME="tensorBoard Coverage Results" MODIFIED="1538034973705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -91,7 +49,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gitignore" value="2" />
+          <entry key="gitignore" value="3" />
+          <entry key="md" value="2" />
           <entry key="png" value="1" />
           <entry key="py" value="9" />
         </counts>
@@ -99,20 +58,22 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="1" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Python" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
-          <entry key="py" value="68" />
+          <entry key="gitignore" value="3" />
+          <entry key="py" value="86" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="68" />
+          <entry key="PLAIN_TEXT" value="17" />
+          <entry key="Python" value="86" />
         </counts>
       </usages-collector>
     </session>
@@ -125,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MNIST/lstm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+            <state relative-caret-position="308">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -147,6 +108,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>batch_size</find>
+      <find>n_layers</find>
+      <find>enc_cells</find>
+      <find>rnn_lstm</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,11 +131,9 @@
         <option value="$PROJECT_DIR$/read-disk.py" />
         <option value="$PROJECT_DIR$/textOCR/train.py" />
         <option value="$PROJECT_DIR$/textOCR/generateDataset.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CNN/cifar-10-cnn.py" />
         <option value="$PROJECT_DIR$/MINST/tensorBoard.py" />
         <option value="$PROJECT_DIR$/PIMA-INDIANS/pima-indians-tf.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/MINST/minst2.py" />
         <option value="$PROJECT_DIR$/MINST/minist-model1.py" />
         <option value="$PROJECT_DIR$/MINST/minst.py" />
@@ -184,6 +146,8 @@
         <option value="$PROJECT_DIR$/MINST/lstm.py" />
         <option value="$PROJECT_DIR$/MINST/mnist.py" />
         <option value="$PROJECT_DIR$/MNIST/mnist.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/MNIST/lstm.py" />
       </list>
     </option>
@@ -443,18 +407,18 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25053304" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25053304" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49401796" weight="0.31561822" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49401796" visible="true" weight="0.31561822" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3998195" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32942238" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32942238" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49202392" weight="0.2698556" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49202392" weight="0.26898047" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50797606" side_tool="true" weight="0.2698556" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286334" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -465,7 +429,7 @@
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
-      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="SciView" order="6" weight="0.32995737" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26121634" />
@@ -530,13 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
@@ -719,15 +676,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="16" />
+        <state relative-caret-position="44">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MNIST/lstm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+        <state relative-caret-position="308">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
